@@ -32,7 +32,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!--第三方登陆-->
+        <!--第三方社交登陆-->
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-config</artifactId>
