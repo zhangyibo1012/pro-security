@@ -1,5 +1,6 @@
-package cn.zyblogs.security.core.properties;
+package cn.zyblogs.security.core;
 
+import cn.zyblogs.security.core.properties.SecurityProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 

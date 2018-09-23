@@ -5,20 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d79b063f-c1e3-417c-bcb3-c191028c5c5d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/support/SimpleResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/session/invalid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-banding.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/LoginType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityCoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ImageCodeProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ValidateCodeProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeBeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/code/DemoImageCodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityCoreConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/SecurityCoreConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,11 +40,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="BrowserProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
+      <file leaf-file-name="ValidateCodeGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="504">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageCodeGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCodeGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZyblogsAuthenticationSuccessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationSuccessHandler.java">
+      <file leaf-file-name="ValidateCodeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="42" column="82" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="82" />
+            <state relative-caret-position="-151">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZyblogsAuthenticationFailHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java">
+      <file leaf-file-name="ValidateCodeBeanConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeBeanConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="50" column="72" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
+            <state relative-caret-position="173">
+              <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,20 +85,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleUrlAuthenticationFailureHandler.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationFailureHandler.class">
+      <file leaf-file-name="DemoImageCodeGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/code/DemoImageCodeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/LoginType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="65">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +104,8 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-security-app/pom.xml" />
         <option value="$PROJECT_DIR$/pro-security-browser/pom.xml" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/impl/HelloServiceImpl.java" />
@@ -147,7 +153,6 @@
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/DemoApplication.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/UserQueryCondition.java" />
-        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/wiremock/WiremockServer.java" />
         <option value="$PROJECT_DIR$/笔记" />
         <option value="$PROJECT_DIR$/pro-security-demo/pom.xml" />
@@ -155,15 +160,26 @@
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/support/SimpleResponse.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityCoreConfig.java" />
-        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java" />
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityController.java" />
-        <option value="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" />
-        <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/LoginType.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java" />
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ValidateCodeProperties.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeException.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCode.java" />
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ImageCodeProperties.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java" />
+        <option value="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" />
+        <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCodeGenerator.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeBeanConfig.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/code/DemoImageCodeGenerator.java" />
       </list>
     </option>
   </component>
@@ -186,8 +202,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="993" />
-    <option name="y" value="133" />
+    <option name="x" value="587" />
+    <option name="y" value="58" />
     <option name="width" value="705" />
     <option name="height" value="325" />
   </component>
@@ -197,8 +213,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -248,9 +264,16 @@
               <item name="pro-security-browser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-browser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
@@ -285,7 +308,70 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="properties" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,7 +386,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="PasswordE&#9;PSI&#9;JAVA://org.springframework.security.crypto.password.PasswordEncoder&#10;PasswordEncoder&#9;PSI&#9;JAVA://org.springframework.security.config.authentication.PasswordEncoderParser&#10;UserDeS&#9;PSI&#9;JAVA://org.springframework.security.core.userdetails.UserDetailsService" />
+    <property name="SearchEverywhereHistoryKey" value="ValiF&#9;FILE&#9;file://D:/Program Files/projects/pro-security/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java&#10;PasswordE&#9;PSI&#9;JAVA://org.springframework.security.crypto.password.PasswordEncoder&#10;PasswordEncoder&#9;PSI&#9;JAVA://org.springframework.security.config.authentication.PasswordEncoderParser&#10;UserDeS&#9;PSI&#9;JAVA://org.springframework.security.core.userdetails.UserDetailsService" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -321,6 +407,7 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program Files\projects\pro-security\pro-security-core\src\main\java\cn\zyblogs\security\core\properties" />
       <recent name="D:\Program Files\projects\pro-security\pro-security-browser\src\main\resources" />
       <recent name="D:\Program Files\projects\pro-security\pro-security-browser" />
       <recent name="D:\Program Files\projects\pro-security\pro-security-demo\src\main\resources" />
@@ -518,7 +605,8 @@
       <updated>1537542565345</updated>
       <workItem from="1537542569344" duration="3181000" />
       <workItem from="1537607358501" duration="8095000" />
-      <workItem from="1537661495544" duration="28594000" />
+      <workItem from="1537661495544" duration="34985000" />
+      <workItem from="1537713398708" duration="4250000" />
     </task>
     <task id="LOCAL-00001" summary="springboot 打包可执行jar插件">
       <created>1537545712997</created>
@@ -590,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537691964271</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="自定义登陆成功失败 配置">
+      <created>1537697689869</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537697689869</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -626,11 +721,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39870000" />
+    <option name="totallyTimeSpent" value="50511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="10" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -640,7 +734,6 @@
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32952926" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -653,10 +746,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49934897" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6547789" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6847361" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.68005955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28385416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2981771" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952926" />
@@ -667,6 +760,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32952926" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,169 +806,15 @@
     <MESSAGE value="使用DeferredResult异步处理请求服务" />
     <MESSAGE value="使用swagger2生成html文档" />
     <MESSAGE value="处理用户信息获取逻辑  UserDetailsService&#10;处理用户效验 UserDetails&#10;处理加密解密 PasswordEncoder" />
-    <option name="LAST_COMMIT_MESSAGE" value="处理用户信息获取逻辑  UserDetailsService&#10;处理用户效验 UserDetails&#10;处理加密解密 PasswordEncoder" />
+    <MESSAGE value="自定义登陆成功失败 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="自定义登陆成功失败 配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/async/QueueListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="44" column="22" lean-forward="true" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/FileInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/UserQueryCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#UserController#0" />
-            <element signature="e#665#680#0" />
-            <element signature="method#query#0;class#UserController#0" />
-            <element signature="docComment;method#getInfo#0;class#UserController#0" />
-            <element signature="e#1465#1497#0" />
-            <element signature="method#create#0;class#UserController#0" />
-            <element signature="method#update#0;class#UserController#0" />
-            <element signature="e#2469#2707#0" />
-            <element signature="e#2479#2539#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/mock/response/01.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/com/github/tomakehurst/wiremock/2.5.1/wiremock-2.5.1.jar!/com/github/tomakehurst/wiremock/client/WireMock.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5170">
-          <caret line="206" column="23" selection-start-line="206" selection-start-column="23" selection-end-line="206" selection-end-column="23" />
-          <folding>
-            <element signature="e#5243#5244#0" expanded="true" />
-            <element signature="e#5298#5299#0" expanded="true" />
-            <element signature="e#7896#7897#0" expanded="true" />
-            <element signature="e#7962#7963#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/mock/response/02.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/wiremock/WiremockServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/resources/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/笔记">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-browser/SpringSecurity过滤器链.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE-sources.jar!/org/springframework/security/core/userdetails/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -921,10 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-          <folding>
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -967,23 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/resources/demo-signIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -991,30 +910,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityCoreConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1035,33 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/LoginType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationFailureHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1079,10 +947,266 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51001" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/resources/demo-signIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/javax/naming/AuthenticationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/javax/naming/NamingSecurityException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/javax/naming/NamingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="45" column="63" lean-forward="true" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/LoginType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/context/request/ServletWebRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+          <folding>
+            <element signature="e#2027#2028#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="367" column="11" selection-start-line="367" selection-start-column="11" selection-end-line="367" selection-end-column="11" />
+          <folding>
+            <element signature="e#10465#10466#0" expanded="true" />
+            <element signature="e#10499#10500#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="docComment;class#ImageCode#0" />
+            <element signature="e#307#314#0" />
+            <element signature="method#ImageCode#0;class#ImageCode#0" />
+            <element signature="method#ImageCode#1;class#ImageCode#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar!/org/apache/commons/lang/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE.jar!/org/springframework/security/web/authentication/AuthenticationFailureHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/authentication/ZyblogsAuthenticationFailHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="50" column="72" selection-start-line="50" selection-start-column="72" selection-end-line="50" selection-end-column="72" />
+        <state relative-caret-position="112">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/SecurityCoreConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ImageCodeProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/ValidateCodeProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-151">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeBeanConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/code/DemoImageCodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

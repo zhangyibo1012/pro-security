@@ -1,6 +1,9 @@
 package cn.zyblogs.security.browser;
 
 import cn.zyblogs.security.core.properties.SecurityProperties;
+import cn.zyblogs.security.core.validate.code.ValidateCodeFilter;
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @Title: BrowserSecurityConfig.java
@@ -45,8 +50,19 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+
+        // 自定义ValidateCodeFilter
+        ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
+        validateCodeFilter.setAuthenticationFailureHandler(zyblogsAuthenticationFailHandler);
+        // 传入配置
+        validateCodeFilter.setSecurityProperties(securityProperties);
+        // 配置的路径放入集合urls set集合
+        validateCodeFilter.afterPropertiesSet();
+
+        //添加自定义过滤器
+        http.addFilterBefore(validateCodeFilter ,UsernamePasswordAuthenticationFilter.class)
         // 表单登陆
-        http.formLogin()
+                .formLogin()
                 // 自定义登陆页面
 //                .loginPage("/zyblogs-signIn.html")
                 .loginPage("/authentication/require")
@@ -63,7 +79,7 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 
                 // 权限匹配 这个页面不需要身份认证  其它的需要
-                .antMatchers("/authentication/require" , securityProperties.getBrowser().getLoginPage()).permitAll()
+                .antMatchers("/authentication/require" , securityProperties.getBrowser().getLoginPage() ,"/code/image").permitAll()
 
                 // 任何请求
                 .anyRequest()
