@@ -49,11 +49,15 @@ public class UserController {
     @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable(name = "id") String id){
 
-        throw new UserNotExitsException(id);
+        // 已被处理  拦截器afterCompletion null
+//        throw new UserNotExitsException(id);
 
-//        User user = new User();
-//        user.setUsername("tom");
-//        return user;
+//        throw  new RuntimeException(id);
+
+        System.err.println("进入getInfo服务");
+        User user = new User();
+        user.setUsername("tom");
+        return user;
     }
 
     @PostMapping
