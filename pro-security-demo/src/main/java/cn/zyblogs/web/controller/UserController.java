@@ -4,6 +4,8 @@ import cn.zyblogs.dto.User;
 import cn.zyblogs.dto.UserQueryCondition;
 import cn.zyblogs.exception.UserNotExitsException;
 import com.fasterxml.jackson.annotation.JsonView;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -28,6 +30,7 @@ public class UserController {
 
     @GetMapping()
     @JsonView(User.UserSimpleView.class)
+    @ApiOperation(value = "用户查询服务")
     public List<User> query(UserQueryCondition condition ,@PageableDefault(page = 2 ,size = 17 ,sort = "username ,asc") Pageable pageable){
 
         System.out.println(condition.toString());
@@ -47,7 +50,7 @@ public class UserController {
      */
     @GetMapping(value = "{id:\\d+}")
     @JsonView(User.UserDetailView.class)
-    public User getInfo(@PathVariable(name = "id") String id){
+    public User getInfo(@ApiParam(value = "用户id") @PathVariable(name = "id") String id){
 
         // 已被处理  拦截器afterCompletion null
 //        throw new UserNotExitsException(id);
