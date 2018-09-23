@@ -32,3 +32,11 @@ AOP面向切面编程 切片
     使用Callable异步处理请求服务
 
     使用DeferredResult异步处理请求服务
+
+    SpringSecurity核心功能：
+       1.认证(你是谁)
+       2.授权(你能干什么)
+       3.攻击防护(防止伪造身份)
+
+    SpringSecurity基本原理：
+        Spring Security过滤器链：
