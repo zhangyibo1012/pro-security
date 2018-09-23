@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -33,6 +34,15 @@ public class WebConfig  extends WebMvcConfigurerAdapter {
         // 添加配置
         registry.addInterceptor(timeInterceptor);
     }
+
+//    /**
+//     *  异步支持
+//     * @param configurer
+//     */
+//    @Override
+//    public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+//        super.configureAsyncSupport(configurer);
+//    }
 
     /**
      *  注册TimeFilter过滤器 加入springboot
