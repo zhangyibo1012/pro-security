@@ -15,31 +15,18 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class ImageCode {
+public class ImageCode extends ValidateCode{
 
     private BufferedImage image;
-    private String code;
-    private LocalDateTime expireTime;
 
-    /**
-     * 是否过期
-     * @return
-     */
-    public boolean isExpried(){
-        // 当前时间在过期时间之后 过期
-        return LocalDateTime.now().isAfter(expireTime);
-    }
 
-    public ImageCode(BufferedImage image, String code, int expireTime) {
+    public ImageCode(BufferedImage image, String code, int expireIn) {
+        super(code,expireIn);
         this.image = image;
-        this.code = code;
-        // 60s过期  当前时间加上60s
-        this.expireTime = LocalDateTime.now().plusSeconds(60) ;
     }
 
     public ImageCode(BufferedImage image, String code, LocalDateTime expireTime) {
+        super(code,expireTime);
         this.image = image;
-        this.code = code;
-        this.expireTime = expireTime;
     }
 }

@@ -1,6 +1,8 @@
 
 package cn.zyblogs.security.core.properties;
 
+import cn.zyblogs.security.core.validate.code.ImageCode;
+import cn.zyblogs.security.core.validate.code.sms.SmsCodeSender;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,18 +15,13 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class ImageCodeProperties {
-	
+public class ImageCodeProperties  extends SmsCodeProperties {
+
+	public ImageCodeProperties(){
+		setLength(4);
+	}
 
 	private int width = 67;
 	private int height = 23;
-	private int length = 4;
-
-	/**
-	 *  过期时间 60s
-	 */
-	private int expireIn = 60;
-	private String url;
-	
 
 }

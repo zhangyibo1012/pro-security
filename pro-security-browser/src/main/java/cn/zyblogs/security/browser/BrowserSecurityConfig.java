@@ -116,7 +116,7 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 
                 // 权限匹配 这个页面不需要身份认证  其它的需要
-                .antMatchers("/authentication/require" , securityProperties.getBrowser().getLoginPage() ,"/code/image").permitAll()
+                .antMatchers("/authentication/require" , securityProperties.getBrowser().getLoginPage() ,"/code/*").permitAll()
 
                 // 任何请求
                 .anyRequest()
