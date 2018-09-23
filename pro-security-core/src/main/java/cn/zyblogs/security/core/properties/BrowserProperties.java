@@ -23,4 +23,9 @@ public class BrowserProperties {
      *  默认返回json
      */
     private LoginType loginType = LoginType.JSON;
+
+    /**
+     *  一小时
+     */
+    private int remeberMeSeconds = 3600;
 }

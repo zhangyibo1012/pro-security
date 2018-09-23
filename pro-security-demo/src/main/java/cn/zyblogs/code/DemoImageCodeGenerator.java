@@ -2,7 +2,6 @@ package cn.zyblogs.code;
 
 import cn.zyblogs.security.core.validate.code.ImageCode;
 import cn.zyblogs.security.core.validate.code.ValidateCodeGenerator;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
@@ -14,7 +13,7 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @Author ZhangYB
  * @Version V1.0
  */
-@Component("imageCodeGenerator")
+//@Component("imageCodeGenerator")
 public class DemoImageCodeGenerator implements ValidateCodeGenerator {
     @Override
     public ImageCode generate(ServletWebRequest request) {

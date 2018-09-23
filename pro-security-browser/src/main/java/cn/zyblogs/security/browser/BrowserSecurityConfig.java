@@ -9,12 +9,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.sql.DataSource;
 
 /**
  * @Title: BrowserSecurityConfig.java
@@ -39,12 +44,37 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
     private AuthenticationFailureHandler zyblogsAuthenticationFailHandler;
 
     /**
+     *  数据源信息
+     * @return
+     */
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    /**
      * 加密  每次加密都生成不一样的字符串
      * @return
      */
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    /**
+     * 记住我功能
+     * @param http
+     * @throws Exception
+     */
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository(){
+        JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
+        tokenRepository.setDataSource(dataSource);
+        // 系统启动自动建这张数据表  可以写也可以不写
+        // 第二次启动还会建表  建议不写
+//        tokenRepository.setCreateTableOnStartup(true);
+        return tokenRepository;
     }
 
     @Override
@@ -57,7 +87,7 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
         // 传入配置
         validateCodeFilter.setSecurityProperties(securityProperties);
         // 配置的路径放入集合urls set集合
-        validateCodeFilter.afterPropertiesSet();
+//        validateCodeFilter.afterPropertiesSet();
 
         //添加自定义过滤器
         http.addFilterBefore(validateCodeFilter ,UsernamePasswordAuthenticationFilter.class)
@@ -72,6 +102,13 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .successHandler(zyblogsAuthenticationSuccessHandler)
                 // 失败的处理器
                 .failureHandler(zyblogsAuthenticationFailHandler)
+                .and()
+                // 记住我配置
+                .rememberMe()
+                .tokenRepository(persistentTokenRepository())
+                .tokenValiditySeconds(securityProperties.getBrowser().getRemeberMeSeconds())
+                .userDetailsService(userDetailsService)
+                // 记住我配置结束
         // 网页弹窗登陆
 //                http.httpBasic()
                 .and()

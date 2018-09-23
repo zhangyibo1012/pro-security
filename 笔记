@@ -40,3 +40,7 @@ AOP面向切面编程 切片
 
     SpringSecurity基本原理：
         Spring Security过滤器链：
+
+    记住我原理：浏览器 认证请求  认证成功 调用remeberMeService服务，服务中TokenRepository将token写入浏览器cookie ， 同时写入数据库
+
+        用户再次访问 不需要登陆了  经过rememberMe过滤器 读取cookie中的token  ，查询数据库，获取用户信息
