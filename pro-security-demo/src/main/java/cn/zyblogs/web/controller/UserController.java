@@ -2,12 +2,12 @@ package cn.zyblogs.web.controller;
 
 import cn.zyblogs.dto.User;
 import cn.zyblogs.dto.UserQueryCondition;
+import cn.zyblogs.exception.UserNotExitsException;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -48,9 +48,12 @@ public class UserController {
     @GetMapping(value = "{id:\\d+}")
     @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable(name = "id") String id){
-        User user = new User();
-        user.setUsername("tom");
-        return user;
+
+        throw new UserNotExitsException(id);
+
+//        User user = new User();
+//        user.setUsername("tom");
+//        return user;
     }
 
     @PostMapping
