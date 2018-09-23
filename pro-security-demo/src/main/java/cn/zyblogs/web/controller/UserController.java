@@ -6,8 +6,11 @@ import com.fasterxml.jackson.annotation.JsonView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,5 +51,46 @@ public class UserController {
         User user = new User();
         user.setUsername("tom");
         return user;
+    }
+
+    @PostMapping
+    public User create(@Valid @RequestBody  User user , BindingResult errors){
+
+        if (errors.hasErrors()){
+            errors.getAllErrors().stream().forEach(objectError -> System.out.println(objectError.getDefaultMessage()));
+        }
+
+        System.out.println("收到参数:" + user.getId());
+        System.out.println("收到参数:" + user.getUsername());
+        System.out.println("收到参数:" + user.getPassword());
+        System.out.println("收到参数:" + user.getBirthday());
+
+        user.setId("1");
+        return user;
+    }
+
+    @PutMapping(value = "{id:\\d+}")
+    public User update(@Valid @RequestBody  User user , BindingResult errors){
+
+        if (errors.hasErrors()) {
+            errors.getAllErrors().stream().forEach(error ->{
+//                FieldError fieldError = (FieldError)error;
+//                String message = fieldError.getField() + " " +error.getDefaultMessage();
+                System.out.println(error.getDefaultMessage());
+            });
+        }
+
+        System.out.println("收到参数Id:" + user.getId());
+        System.out.println("收到参数Username:" + user.getUsername());
+        System.out.println("收到参数Password:" + user.getPassword());
+        System.out.println("收到参数Birthday:" + user.getBirthday());
+
+        user.setId("1");
+        return user;
+    }
+
+    @DeleteMapping(value = "{id:\\d+}")
+    public void delete(@PathVariable String id){
+        System.out.println("delete id " + id +"的用户 ");
     }
 }

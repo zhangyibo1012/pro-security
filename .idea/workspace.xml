@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d79b063f-c1e3-417c-bcb3-c191028c5c5d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/HelloService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraintValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" afterDir="false" />
@@ -23,27 +27,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+      <file leaf-file-name="UserControllerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="317">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+              <folding>
+                <element signature="docComment;class#UserControllerTest#0" />
+                <element signature="e#1025#1053#0" />
+                <element signature="method#setup#0;class#UserControllerTest#0" />
+                <element signature="method#whenQuerySuccess#0;class#UserControllerTest#0" />
+                <element signature="e#1638#1679#0" />
+                <element signature="method#whenGetInfoSuccess#0;class#UserControllerTest#0" />
+                <element signature="method#whenGetInfoFail#0;class#UserControllerTest#0" />
+                <element signature="method#whenCreateSuccess#0;class#UserControllerTest#0" />
+                <element signature="method#whenUpdateSuccess#0;class#UserControllerTest#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserControllerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java">
+      <file leaf-file-name="笔记" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/笔记">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="32" />
+            <state relative-caret-position="216">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelloService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/HelloService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
               <folding>
-                <element signature="docComment;class#UserControllerTest#0" />
-                <element signature="method#setup#0;class#UserControllerTest#0" />
-                <element signature="method#whenQuerySuccess#0;class#UserControllerTest#0" />
-                <element signature="e#1498#1539#0" />
-                <element signature="method#whenGetInfoFail#0;class#UserControllerTest#0" />
+                <element signature="docComment;class#UserController#0" />
+                <element signature="e#614#629#0" />
+                <element signature="e#704#717#0" />
+                <element signature="method#query#0;class#UserController#0" />
+                <element signature="docComment;method#getInfo#0;class#UserController#0" />
+                <element signature="e#1268#1300#0" />
+                <element signature="method#getInfo#0;class#UserController#0" />
+                <element signature="method#create#0;class#UserController#0" />
+                <element signature="e#2940#2941#0" expanded="true" />
+                <element signature="e#2999#3000#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PathVariable.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -54,6 +101,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -82,10 +130,14 @@
         <option value="$PROJECT_DIR$/pro-security-demo/pom.xml" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/UserQueryCondition.java" />
-        <option value="$PROJECT_DIR$/笔记" />
-        <option value="$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/impl/HelloServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraint.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraintValidator.java" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/笔记" />
+        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/HelloService.java" />
       </list>
     </option>
   </component>
@@ -108,8 +160,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="735" />
-    <option name="y" value="398" />
+    <option name="x" value="671" />
+    <option name="y" value="100" />
     <option name="width" value="705" />
     <option name="height" value="325" />
   </component>
@@ -173,6 +225,37 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zyblogs" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
@@ -247,7 +330,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest">
+  <component name="RunManager" selected="JUnit.UserControllerTest.whenDelSuccess">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -274,7 +357,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserControllerTest.whenGenInfoSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.whenCreateSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pro-security-demo" />
       <extension name="coverage">
         <pattern>
@@ -286,7 +369,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cn.zyblogs.web.controller" />
       <option name="MAIN_CLASS_NAME" value="cn.zyblogs.web.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenGenInfoSuccess" />
+      <option name="METHOD_NAME" value="whenCreateSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -297,7 +380,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserControllerTest.whenGetInfoFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.whenDelSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pro-security-demo" />
       <extension name="coverage">
         <pattern>
@@ -309,7 +392,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cn.zyblogs.web.controller" />
       <option name="MAIN_CLASS_NAME" value="cn.zyblogs.web.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenGetInfoFail" />
+      <option name="METHOD_NAME" value="whenDelSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -343,7 +426,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserControllerTest.whenQuerySuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.whenUpdateSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pro-security-demo" />
       <extension name="coverage">
         <pattern>
@@ -355,7 +438,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cn.zyblogs.web.controller" />
       <option name="MAIN_CLASS_NAME" value="cn.zyblogs.web.controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenQuerySuccess" />
+      <option name="METHOD_NAME" value="whenUpdateSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -411,18 +494,18 @@
     <list>
       <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="JUnit.UserControllerTest" />
-      <item itemvalue="JUnit.UserControllerTest.whenQuerySuccess" />
-      <item itemvalue="JUnit.UserControllerTest.whenGenInfoSuccess" />
       <item itemvalue="JUnit.UserControllerTest.whenGetInfoSuccess" />
-      <item itemvalue="JUnit.UserControllerTest.whenGetInfoFail" />
+      <item itemvalue="JUnit.UserControllerTest.whenCreateSuccess" />
+      <item itemvalue="JUnit.UserControllerTest.whenUpdateSuccess" />
+      <item itemvalue="JUnit.UserControllerTest.whenDelSuccess" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.whenDelSuccess" />
+        <item itemvalue="JUnit.UserControllerTest.whenUpdateSuccess" />
+        <item itemvalue="JUnit.UserControllerTest.whenCreateSuccess" />
         <item itemvalue="JUnit.UserControllerTest.whenGetInfoSuccess" />
-        <item itemvalue="JUnit.UserControllerTest.whenQuerySuccess" />
-        <item itemvalue="JUnit.UserControllerTest.whenGetInfoFail" />
-        <item itemvalue="JUnit.UserControllerTest.whenGenInfoSuccess" />
+        <item itemvalue="JUnit.UserControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +520,8 @@
       <option name="presentableId" value="Default" />
       <updated>1537542565345</updated>
       <workItem from="1537542569344" duration="3181000" />
-      <workItem from="1537607358501" duration="6216000" />
+      <workItem from="1537607358501" duration="8095000" />
+      <workItem from="1537661495544" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="springboot 打包可执行jar插件">
       <created>1537545712997</created>
@@ -453,47 +537,53 @@
       <option name="project" value="LOCAL" />
       <updated>1537611629483</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=" @JsonView控制json输出页面内容 使用接口声明多个视图 在值对象上指定视图  在方法上指定试图">
+      <created>1537613757450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537613757450</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserControllerTest_whenGetInfoFail - 2018.09.22 at 18h 37m 06s.xml">
-      <configuration name="UserControllerTest.whenGetInfoFail" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenCreateSuccess - 2018.09.22 at 19h 19m 54s.xml">
+      <configuration name="UserControllerTest.whenCreateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoFail - 2018.09.22 at 18h 37m 49s.xml">
-      <configuration name="UserControllerTest.whenGetInfoFail" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenCreateSuccess - 2018.09.22 at 19h 22m 37s.xml">
+      <configuration name="UserControllerTest.whenCreateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoSuccess - 2018.09.22 at 18h 38m 21s.xml">
-      <configuration name="UserControllerTest.whenGetInfoSuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 21m 22s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoFail - 2018.09.22 at 18h 38m 38s.xml">
-      <configuration name="UserControllerTest.whenGetInfoFail" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 26m 12s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenQuerySuccess - 2018.09.22 at 18h 46m 52s.xml">
-      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 30m 31s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoSuccess - 2018.09.22 at 18h 47m 32s.xml">
-      <configuration name="UserControllerTest.whenGetInfoSuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 31m 09s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoSuccess - 2018.09.22 at 18h 49m 00s.xml">
-      <configuration name="UserControllerTest.whenGetInfoSuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 32m 36s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenQuerySuccess - 2018.09.22 at 18h 49m 36s.xml">
-      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 51m 02s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoSuccess - 2018.09.22 at 18h 49m 57s.xml">
-      <configuration name="UserControllerTest.whenGetInfoSuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenUpdateSuccess - 2018.09.23 at 08h 53m 16s.xml">
+      <configuration name="UserControllerTest.whenUpdateSuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_whenGetInfoSuccess - 2018.09.22 at 18h 50m 35s.xml">
-      <configuration name="UserControllerTest.whenGetInfoSuccess" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenDelSuccess - 2018.09.23 at 08h 57m 04s.xml">
+      <configuration name="UserControllerTest.whenDelSuccess" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9397000" />
+    <option name="totallyTimeSpent" value="14386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="10" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -503,6 +593,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32952926" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -518,7 +609,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.95149785" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.68005955" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22135417" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23307292" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -540,14 +631,66 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot 打包可执行jar插件" />
     <MESSAGE value="测试restful风格demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试restful风格demo" />
+    <MESSAGE value=" @JsonView控制json输出页面内容 使用接口声明多个视图 在值对象上指定视图  在方法上指定试图" />
+    <option name="LAST_COMMIT_MESSAGE" value=" @JsonView控制json输出页面内容 使用接口声明多个视图 在值对象上指定视图  在方法上指定试图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;class#UserControllerTest#0" />
+            <element signature="e#1025#1053#0" />
+            <element signature="method#setup#0;class#UserControllerTest#0" />
+            <element signature="method#whenQuerySuccess#0;class#UserControllerTest#0" />
+            <element signature="e#1638#1679#0" />
+            <element signature="method#whenGetInfoSuccess#0;class#UserControllerTest#0" />
+            <element signature="method#whenGetInfoFail#0;class#UserControllerTest#0" />
+            <element signature="method#whenCreateSuccess#0;class#UserControllerTest#0" />
+            <element signature="method#whenUpdateSuccess#0;class#UserControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#UserController#0" />
+            <element signature="e#614#629#0" />
+            <element signature="e#704#717#0" />
+            <element signature="method#query#0;class#UserController#0" />
+            <element signature="docComment;method#getInfo#0;class#UserController#0" />
+            <element signature="e#1268#1300#0" />
+            <element signature="method#getInfo#0;class#UserController#0" />
+            <element signature="method#create#0;class#UserController#0" />
+            <element signature="e#2940#2941#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
@@ -638,12 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="174" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="e#2111#2112#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#6484#6648#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,25 +800,11 @@
     </entry>
     <entry file="file://F:/BaiduNetdiskDownload/project(1)/p1o6vt/imooc-security-demo/src/main/java/com/imooc/dto/UserQueryCondition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-115" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-security.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/UserQueryCondition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-test/4.3.10.RELEASE/spring-test-4.3.10.RELEASE.jar!/org/springframework/test/web/servlet/result/MockMvcResultMatchers.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -697,24 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="docComment;class#User#0" />
-            <element signature="e#194#201#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/笔记">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/bind/annotation/GetMapping.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -722,23 +827,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/UserQueryCondition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/javax/validation/ConstraintValidator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/impl/HelloServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/javax/validation/constraints/Past.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="26" column="52" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/validator/MyConstraintValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-demo/src/test/java/cn/zyblogs/web/controller/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="317">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
           <folding>
             <element signature="docComment;class#UserControllerTest#0" />
+            <element signature="e#1025#1053#0" />
             <element signature="method#setup#0;class#UserControllerTest#0" />
             <element signature="method#whenQuerySuccess#0;class#UserControllerTest#0" />
-            <element signature="e#1498#1539#0" />
+            <element signature="e#1638#1679#0" />
+            <element signature="method#whenGetInfoSuccess#0;class#UserControllerTest#0" />
             <element signature="method#whenGetInfoFail#0;class#UserControllerTest#0" />
+            <element signature="method#whenCreateSuccess#0;class#UserControllerTest#0" />
+            <element signature="method#whenUpdateSuccess#0;class#UserControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/bind/annotation/PathVariable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔记">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="docComment;class#UserController#0" />
+            <element signature="e#614#629#0" />
+            <element signature="e#704#717#0" />
+            <element signature="method#query#0;class#UserController#0" />
+            <element signature="docComment;method#getInfo#0;class#UserController#0" />
+            <element signature="e#1268#1300#0" />
+            <element signature="method#getInfo#0;class#UserController#0" />
+            <element signature="method#create#0;class#UserController#0" />
+            <element signature="e#2940#2941#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
           </folding>
         </state>
       </provider>
