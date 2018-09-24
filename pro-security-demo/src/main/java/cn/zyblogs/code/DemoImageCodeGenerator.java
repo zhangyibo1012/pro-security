@@ -1,6 +1,6 @@
 package cn.zyblogs.code;
 
-import cn.zyblogs.security.core.validate.code.ImageCode;
+import cn.zyblogs.security.core.validate.code.image.ImageCode;
 import cn.zyblogs.security.core.validate.code.ValidateCodeGenerator;
 import org.springframework.web.context.request.ServletWebRequest;
 

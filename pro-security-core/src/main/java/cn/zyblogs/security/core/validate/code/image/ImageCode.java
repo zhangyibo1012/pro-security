@@ -1,5 +1,6 @@
-package cn.zyblogs.security.core.validate.code;
+package cn.zyblogs.security.core.validate.code.image;
 
+import cn.zyblogs.security.core.validate.code.ValidateCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class ImageCode extends ValidateCode{
+public class ImageCode extends ValidateCode {
 
     private BufferedImage image;
 

@@ -3,6 +3,7 @@
  */
 package cn.zyblogs.security.core.validate.code;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**

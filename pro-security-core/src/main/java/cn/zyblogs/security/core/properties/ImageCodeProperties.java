@@ -1,8 +1,6 @@
 
 package cn.zyblogs.security.core.properties;
 
-import cn.zyblogs.security.core.validate.code.ImageCode;
-import cn.zyblogs.security.core.validate.code.sms.SmsCodeSender;
 import lombok.Getter;
 import lombok.Setter;
 

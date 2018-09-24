@@ -1,26 +1,23 @@
-package cn.zyblogs.security.core.validate.code;
+package cn.zyblogs.security.core.validate.code.sms;
 
 import cn.zyblogs.security.core.properties.SecurityProperties;
+import cn.zyblogs.security.core.validate.code.ValidateCode;
+import cn.zyblogs.security.core.validate.code.ValidateCodeGenerator;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.Random;
-
 /**
- * @Title: ImageCodeGenerator.java
- * @Package cn.zyblogs.security.core.validate.code
- * @Description: TODO 短信验证码
+ * @Title: SmsCodeGenerator.java
+ * @Package cn.zyblogs.security.core.validate.code.sms
+ * @Description: TODO
  * @Author ZhangYB
  * @Version V1.0
  */
-@Component("smsCodeGenerator")
+@Component("smsValidateCodeGenerator")
 public class SmsCodeGenerator implements ValidateCodeGenerator {
 
     /**
@@ -31,10 +28,14 @@ public class SmsCodeGenerator implements ValidateCodeGenerator {
     @Setter
     private SecurityProperties securityProperties;
 
-
     @Override
     public ValidateCode generate(ServletWebRequest request) {
         String code = RandomStringUtils.randomNumeric(securityProperties.getCode().getSms().getLength());
-        return new ValidateCode(code , securityProperties.getCode().getSms().getExpireIn());
+        return new ValidateCode(code, securityProperties.getCode().getSms().getExpireIn());
     }
+
+
+
+
 }
+

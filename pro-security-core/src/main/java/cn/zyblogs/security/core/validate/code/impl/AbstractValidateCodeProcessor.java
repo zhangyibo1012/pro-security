@@ -13,6 +13,7 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @Title: AbstractValidateCodeProcessor.java
@@ -49,7 +50,19 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 	private C generate(ServletWebRequest request) {
 		String type = getValidateCodeType(request).toString().toLowerCase();
 		String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
+		// imageValidateCodeGenerator
 		ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(generatorName);
+
+		System.out.println(generatorName);
+		validateCodeGenerators.forEach((k , v )-> System.out.println("key : " + k + " value : " + v));
+
+//		imageValidateCodeGenerator
+//		key : smsValidateCodeGenerator value : com.imooc.security.core.validate.code.sms.SmsCodeGenerator@21acb983
+//		key : imageValidateCodeGenerator value : com.imooc.security.core.validate.code.image.ImageCodeGenerator@37dbd619
+
+//		imageValidateCodeGenerator
+//		key : smsValidateCodeGenerator value : cn.zyblogs.security.core.validate.code.sms.SmsCodeGenerator@1c46be64
+//		key : imageCodeGenerator value : cn.zyblogs.security.core.validate.code.image.ImageCodeGenerator@3a3bb547
 		if (validateCodeGenerator == null) {
 			throw new ValidateCodeException("验证码生成器" + generatorName + "不存在");
 		}
