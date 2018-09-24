@@ -1,7 +1,10 @@
 package cn.zyblogs.security.browser;
 
+import cn.zyblogs.security.core.authentication.SmsCodeAuthenticationFilter;
+import cn.zyblogs.security.core.authentication.SmsCodeAuthenticationSecurityConfig;
 import cn.zyblogs.security.core.properties.SecurityProperties;
 import cn.zyblogs.security.core.validate.code.ValidateCodeFilter;
+import cn.zyblogs.security.core.validate.code.ValidateSmsCodeFilter;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +41,9 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
     private SecurityProperties securityProperties;
 
     @Autowired
+    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
+
+    @Autowired
     private AuthenticationSuccessHandler zyblogsAuthenticationSuccessHandler;
 
     @Autowired
@@ -64,8 +70,6 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
 
     /**
      * 记住我功能
-     * @param http
-     * @throws Exception
      */
     @Bean
     public PersistentTokenRepository persistentTokenRepository(){
@@ -87,10 +91,21 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
         // 传入配置
         validateCodeFilter.setSecurityProperties(securityProperties);
         // 配置的路径放入集合urls set集合
-//        validateCodeFilter.afterPropertiesSet();
+        validateCodeFilter.afterPropertiesSet();
+
+        //================================================
+        // 自定义ValidateCodeFilter
+        ValidateSmsCodeFilter smsCodeFilter = new ValidateSmsCodeFilter();
+        smsCodeFilter.setAuthenticationFailureHandler(zyblogsAuthenticationFailHandler);
+        // 传入配置
+        smsCodeFilter.setSecurityProperties(securityProperties);
+        // 配置的路径放入集合urls set集合
+        smsCodeFilter.afterPropertiesSet();
+
 
         //添加自定义过滤器
-        http.addFilterBefore(validateCodeFilter ,UsernamePasswordAuthenticationFilter.class)
+        http.addFilterBefore(smsCodeFilter , UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(validateCodeFilter ,UsernamePasswordAuthenticationFilter.class)
         // 表单登陆
                 .formLogin()
                 // 自定义登陆页面
@@ -124,7 +139,9 @@ public class BrowserSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 // csrf 关闭
-                .csrf().disable();
+                .csrf().disable()
+                // 添加配置对象
+                .apply(smsCodeAuthenticationSecurityConfig);
 
     }
 

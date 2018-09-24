@@ -27,7 +27,6 @@ import java.io.IOException;
 @RestController
 public class ValidateCodeController {
 
-    public static final String SESSION_KEY = "SESSION_KEY_IMAGE_CODE";
 
     /**
      *  操作session工具类对象
@@ -58,7 +57,7 @@ public class ValidateCodeController {
 
         ImageCode imageCode = (ImageCode) imageCodeGenerator .generate(new ServletWebRequest(request));
         //存入session 参数1：从请求中拿到session。 2.key  3.ImageCode
-        sessionStrategy.setAttribute(new ServletWebRequest(request) ,SESSION_KEY ,imageCode );
+        sessionStrategy.setAttribute(new ServletWebRequest(request) ,ValidateCodeProcessor.SESSION_KEY_PREFIX + "IMAGE" ,imageCode );
 
         // 写出去的图片 格式 响应的输出流
         ImageIO.write(imageCode.getImage() , "JPEG" ,response.getOutputStream());
@@ -69,7 +68,7 @@ public class ValidateCodeController {
 
         ValidateCode smsCode = imageCodeGenerator .generate(new ServletWebRequest(request));
         //存入session 参数1：从请求中拿到session。 2.key  3.ImageCode
-        sessionStrategy.setAttribute(new ServletWebRequest(request) ,SESSION_KEY ,smsCode );
+        sessionStrategy.setAttribute(new ServletWebRequest(request) ,ValidateCodeProcessor.SESSION_KEY_PREFIX + "SMS" ,smsCode );
 
         // 发送
         // 获取请求中的手机号参数
