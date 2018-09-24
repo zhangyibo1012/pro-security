@@ -8,12 +8,8 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.social.connect.web.HttpSessionSessionStrategy;
-import org.springframework.social.connect.web.SessionStrategy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
-import org.springframework.web.bind.ServletRequestBindingException;
-import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -23,7 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -31,9 +26,9 @@ import java.util.Set;
  * @Title: ValidateCodeFilter.java
  * @Package cn.zyblogs.security.core.validate.code
  * @Description: TODO 处理效验验证码 OncePerRequestFilter工具类
- *                      保证过滤器只可以调用一次
- *
- *                      InitializingBean接口 初始化urls值
+ * 保证过滤器只可以调用一次
+ * <p>
+ * InitializingBean接口 初始化urls值
  * @Author ZhangYB
  * @Version V1.0
  */
@@ -98,9 +93,8 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     /**
      * (non-Javadoc)
      *
-     * @see
-     * org.springframework.web.filter.OncePerRequestFilter#doFilterInternal(
-     * javax.servlet.http.HttpServletRequest,
+     * @see org.springframework.web.filter.OncePerRequestFilter#doFilterInternal(
+     *javax.servlet.http.HttpServletRequest,
      * javax.servlet.http.HttpServletResponse, javax.servlet.FilterChain)
      */
     @Override

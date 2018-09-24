@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
@@ -42,7 +41,7 @@ public class ZyblogsAuthenticationFailHandler extends SimpleUrlAuthenticationFai
 
         log.info("登录失败");
 
-        if (LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())){
+        if (LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())) {
             // 500
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
             response.setContentType("application/json;charset=UTF-8");

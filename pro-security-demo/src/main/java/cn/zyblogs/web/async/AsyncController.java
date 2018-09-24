@@ -1,18 +1,14 @@
 /**
- * 
+ *
  */
 package cn.zyblogs.web.async;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.RandomStringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
-
-import javax.validation.constraints.Size;
 
 /**
  * @Title: AsyncController.java
@@ -24,25 +20,25 @@ import javax.validation.constraints.Size;
 @RestController
 @Slf4j
 public class AsyncController {
-	
-	@Autowired
-	private MockQueue mockQueue;
-	
-	@Autowired
-	private DeferredResultHolder deferredResultHolder;
-	
 
-	@RequestMapping( value = "order")
-	public DeferredResult<String> order() throws Exception {
+    @Autowired
+    private MockQueue mockQueue;
 
-		log.info("主线程开始");
+    @Autowired
+    private DeferredResultHolder deferredResultHolder;
 
-		// 随机订单号8位
-		String orderNumber = RandomStringUtils.randomNumeric(8);
-		mockQueue.setPlaceOrder(orderNumber);
-		
-		DeferredResult<String> result = new DeferredResult<>();
-		deferredResultHolder.getMap().put(orderNumber, result);
+
+    @RequestMapping(value = "order")
+    public DeferredResult<String> order() throws Exception {
+
+        log.info("主线程开始");
+
+        // 随机订单号8位
+        String orderNumber = RandomStringUtils.randomNumeric(8);
+        mockQueue.setPlaceOrder(orderNumber);
+
+        DeferredResult<String> result = new DeferredResult<>();
+        deferredResultHolder.getMap().put(orderNumber, result);
 
 //		Callable<String> result = new Callable<String>() {
 //			@Override
@@ -53,8 +49,8 @@ public class AsyncController {
 //				return "success";
 //			}
 //		};
-		log.info("主线程返回");
-		return result;
-	}
+        log.info("主线程返回");
+        return result;
+    }
 
 }

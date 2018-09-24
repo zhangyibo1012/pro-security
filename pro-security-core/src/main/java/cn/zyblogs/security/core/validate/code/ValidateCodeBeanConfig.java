@@ -20,14 +20,14 @@ import org.springframework.context.annotation.Configuration;
 public class ValidateCodeBeanConfig {
 
     /**
-     *  配置信息
+     * 配置信息
      */
     @Autowired
     private SecurityProperties securityProperties;
 
     /**
-     * @ConditionalOnMissingBean 这个注解在系统启动的时候加载这个bean之前会在spring容器中找一下是否已经有这个name的bean了,如果找到就不会用这个了
      * @return
+     * @ConditionalOnMissingBean 这个注解在系统启动的时候加载这个bean之前会在spring容器中找一下是否已经有这个name的bean了, 如果找到就不会用这个了
      */
     @Bean
     @ConditionalOnMissingBean(name = "imageValidateCodeGenerator")
@@ -39,7 +39,7 @@ public class ValidateCodeBeanConfig {
 
     @Bean
     @ConditionalOnMissingBean(SmsCodeSender.class)
-    public SmsCodeSender smsCodeSender(){
+    public SmsCodeSender smsCodeSender() {
         return new DefaultSmsCodeSender();
     }
 }

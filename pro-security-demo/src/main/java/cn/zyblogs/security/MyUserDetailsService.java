@@ -1,16 +1,16 @@
-package cn.zyblogs.security.browser;
+package cn.zyblogs.security;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.social.security.SocialUser;
+import org.springframework.social.security.SocialUserDetails;
+import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
-
-import javax.validation.constraints.Size;
 
 /**
  * @Title: MyUserDetailsService.java
@@ -21,7 +21,7 @@ import javax.validation.constraints.Size;
  */
 @Component
 @Slf4j
-public class MyUserDetailsService implements UserDetailsService {
+public class MyUserDetailsService implements UserDetailsService ,SocialUserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -30,9 +30,25 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        log.info("表单登陆用户名: " + username);
+       return buildUser(username);
+    }
 
-        log.info("登陆用户名: " + username );
+    /**
+     * 社交登陆用的方法
+     * @param openid查出来的userid
+     * @return
+     * @throws UsernameNotFoundException
+     */
+    @Override
+    public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+        log.info("社交登陆用户Id: " + userId);
 
+        return buildUser(userId);
+
+    }
+
+    private SocialUserDetails buildUser(String userId) {
         // 根据用户名查找用户信息
 //        return new User(username , "123456" ,AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
@@ -40,6 +56,8 @@ public class MyUserDetailsService implements UserDetailsService {
         // password 注册的时候需要加密
         String password = passwordEncoder.encode("123456");
         log.info("数据库密码是: " + password);
-        return new User(username , password, true , true,true,true,AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+        return new SocialUser(userId, password, true, true, true, true, AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
     }
+
+
 }

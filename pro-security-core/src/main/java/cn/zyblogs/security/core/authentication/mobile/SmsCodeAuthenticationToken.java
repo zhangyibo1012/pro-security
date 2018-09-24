@@ -29,9 +29,8 @@ public class SmsCodeAuthenticationToken extends AbstractAuthenticationToken {
      * This constructor can be safely used by any code that wishes to create a
      * <code>UsernamePasswordAuthenticationToken</code>, as the {@link #isAuthenticated()}
      * will return <code>false</code>.
-     *
      */
-    public SmsCodeAuthenticationToken(String  mobile) {
+    public SmsCodeAuthenticationToken(String mobile) {
         super(null);
         this.principal = mobile;
         setAuthenticated(false);
@@ -42,10 +41,9 @@ public class SmsCodeAuthenticationToken extends AbstractAuthenticationToken {
      * <code>AuthenticationProvider</code> implementations that are satisfied with
      * producing a trusted (i.e. {@link #isAuthenticated()} = <code>true</code>)
      * authentication token.
-     *
      */
     public SmsCodeAuthenticationToken(Object principal,
-                                               Collection<? extends GrantedAuthority> authorities) {
+                                      Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
         this.principal = principal;
         super.setAuthenticated(true); // must use super, as we override

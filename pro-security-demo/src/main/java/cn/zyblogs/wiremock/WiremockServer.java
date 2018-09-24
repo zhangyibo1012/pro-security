@@ -1,17 +1,12 @@
 package cn.zyblogs.wiremock;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
-import static com.github.tomakehurst.wiremock.client.WireMock.configureFor;
-import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.removeAllMappings;
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
-import static com.github.tomakehurst.wiremock.client.WireMock.urlPathEqualTo;
-
-import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.core.io.ClassPathResource;
+
+import java.io.IOException;
+
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 /**
  * @Title: WiremockServer.java

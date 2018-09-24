@@ -20,6 +20,7 @@ public class TimeInterceptor implements HandlerInterceptor {
 
     /**
      * 在控制器Controller方法被调用之前调用
+     *
      * @param httpServletRequest
      * @param httpServletResponse
      * @param handler
@@ -29,15 +30,16 @@ public class TimeInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler) throws Exception {
         System.err.println("TimeInterceptor.preHandle");
-        System.err.println(((HandlerMethod)handler).getBean().getClass().getName());
-        System.err.println(((HandlerMethod)handler).getMethod().getName());
-        httpServletRequest.setAttribute("startTime" , System.currentTimeMillis());
+        System.err.println(((HandlerMethod) handler).getBean().getClass().getName());
+        System.err.println(((HandlerMethod) handler).getMethod().getName());
+        httpServletRequest.setAttribute("startTime", System.currentTimeMillis());
         // true 放行
         return true;
     }
 
     /**
      * 在控制器Controller方法被调用之后调用  抛出异常不被调用
+     *
      * @param httpServletRequest
      * @param httpServletResponse
      * @param o
@@ -47,12 +49,13 @@ public class TimeInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
         System.err.println("TimeInterceptor.postHandle");
-        final long start =(long)httpServletRequest.getAttribute("startTime");
+        final long start = (long) httpServletRequest.getAttribute("startTime");
         System.err.println("time interceptor 耗时:" + (System.currentTimeMillis() - start));
     }
 
     /**
-     *  无论是否异常 都会被调用执行
+     * 无论是否异常 都会被调用执行
+     *
      * @param httpServletRequest
      * @param httpServletResponse
      * @param o
@@ -62,7 +65,7 @@ public class TimeInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception ex) throws Exception {
         System.err.println("TimeInterceptor.afterCompletion");
-        final long start =(long)httpServletRequest.getAttribute("startTime");
+        final long start = (long) httpServletRequest.getAttribute("startTime");
         System.err.println("time interceptor 耗时:" + (System.currentTimeMillis() - start));
         System.err.println("ex is " + ex);
     }

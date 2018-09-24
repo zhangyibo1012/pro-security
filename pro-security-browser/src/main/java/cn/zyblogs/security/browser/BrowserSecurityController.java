@@ -31,7 +31,7 @@ import java.io.IOException;
 public class BrowserSecurityController {
 
     /**
-     *  缓存请求的url
+     * 缓存请求的url
      */
     private RequestCache requestCache = new HttpSessionRequestCache();
 
@@ -45,20 +45,21 @@ public class BrowserSecurityController {
 
     /**
      * 当需要认证的时候跳转到这里
+     *
      * @param request
      * @param response HttpStatus.UNAUTHORIZED 401
      * @return
      */
     @RequestMapping(value = "authentication/require")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
-    public SimpleResponse requireAuthentication(HttpServletRequest request , HttpServletResponse response) throws IOException {
+    public SimpleResponse requireAuthentication(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        SavedRequest savedRequest = requestCache.getRequest(request , response);
+        SavedRequest savedRequest = requestCache.getRequest(request, response);
         if (savedRequest != null) {
             String targetUrl = savedRequest.getRedirectUrl();
             log.info("引发跳转的请求是: " + targetUrl);
-            if (StringUtils.endsWithIgnoreCase(targetUrl , ".html")){
-                redirectStrategy.sendRedirect(request , response , securityProperties.getBrowser().getLoginPage());
+            if (StringUtils.endsWithIgnoreCase(targetUrl, ".html")) {
+                redirectStrategy.sendRedirect(request, response, securityProperties.getBrowser().getLoginPage());
             }
         }
         return new SimpleResponse("访问的服务需要身份认证，请引导用户到登录页");

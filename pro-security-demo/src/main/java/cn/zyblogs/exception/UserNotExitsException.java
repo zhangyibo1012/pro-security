@@ -1,7 +1,6 @@
 package cn.zyblogs.exception;
 
 import lombok.Getter;
-import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @Title: UserNotExitsException.java
@@ -10,15 +9,15 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Author ZhangYB
  * @Version V1.0
  */
-public class UserNotExitsException extends RuntimeException{
+public class UserNotExitsException extends RuntimeException {
 
-   private static final long serialVersionUID = -7034897190745766939L;
+    private static final long serialVersionUID = -7034897190745766939L;
 
-   @Getter
-   private String id;
+    @Getter
+    private String id;
 
-   public UserNotExitsException(String id){
-       super("user not exist");
-       this.id = id;
-   }
+    public UserNotExitsException(String id) {
+        super("user not exist");
+        this.id = id;
+    }
 }

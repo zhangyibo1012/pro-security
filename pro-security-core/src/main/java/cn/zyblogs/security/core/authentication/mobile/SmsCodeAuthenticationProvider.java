@@ -26,24 +26,23 @@ public class SmsCodeAuthenticationProvider implements AuthenticationProvider {
     /**
      * Performs authentication with the same contract as
      * {@link AuthenticationManager#authenticate(Authentication)}
-     *
-     *  身份认证的逻辑写在这里.
-     *
+     * <p>
+     * 身份认证的逻辑写在这里.
      */
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
-        SmsCodeAuthenticationToken authenticationToken = (SmsCodeAuthenticationToken)authentication;
+        SmsCodeAuthenticationToken authenticationToken = (SmsCodeAuthenticationToken) authentication;
 
         // 获取用户信息
         UserDetails user = userDetailsService.loadUserByUsername((String) authenticationToken.getPrincipal());
 
-        if (user == null){
+        if (user == null) {
             throw new InternalAuthenticationServiceException("无法读取用户信息");
         }
 
         // true 用户信息  权限
-        SmsCodeAuthenticationToken authenticationResult = new SmsCodeAuthenticationToken(user , user.getAuthorities());
+        SmsCodeAuthenticationToken authenticationResult = new SmsCodeAuthenticationToken(user, user.getAuthorities());
 
         authenticationResult.setDetails(authenticationToken.getDetails());
 

@@ -1,29 +1,21 @@
 package cn.zyblogs.security.core.validate.code;
 
 import cn.zyblogs.security.core.properties.SecurityConstants;
-import cn.zyblogs.security.core.validate.code.image.ImageCode;
-import cn.zyblogs.security.core.validate.code.sms.SmsCodeSender;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.social.connect.web.HttpSessionSessionStrategy;
-import org.springframework.social.connect.web.SessionStrategy;
-import org.springframework.web.bind.ServletRequestBindingException;
-import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.ServletWebRequest;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 /**
  * @Title: ValidateCodeController.java
  * @Package cn.zyblogs.security.core.validate.code
  * @Description: TODO  1.根据随机数生成图片
- *                      2.把随机数存入session
- *                      3.将生成的图片写到接口的响应
+ * 2.把随机数存入session
+ * 3.将生成的图片写到接口的响应
  * @Author ZhangYB
  * @Version V1.0
  */
@@ -46,7 +38,6 @@ public class ValidateCodeController {
             throws Exception {
         validateCodeProcessorHolder.findValidateCodeProcessor(type).create(new ServletWebRequest(request, response));
     }
-
 
 
 //    /**

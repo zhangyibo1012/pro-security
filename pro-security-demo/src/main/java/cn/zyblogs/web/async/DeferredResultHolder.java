@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * @Title: DeferredResultHolder.java
  * @Package cn.zyblogs.web.async
- * @Description:  消息传递
+ * @Description: 消息传递
  * @Author ZhangYB
  * @Version V1.0
  */

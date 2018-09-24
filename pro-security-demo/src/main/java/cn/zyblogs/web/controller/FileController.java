@@ -21,7 +21,7 @@ import java.io.*;
 public class FileController {
 
 
-  private final  String folder = "D:\\Program Files\\projects\\pro-security\\pro-security-demo\\src\\main\\java\\cn\\zyblogs\\web\\controller";
+    private final String folder = "D:\\Program Files\\projects\\pro-security\\pro-security-demo\\src\\main\\java\\cn\\zyblogs\\web\\controller";
 
     @PostMapping
     public FileInfo upload(MultipartFile file) throws IOException {
@@ -35,7 +35,7 @@ public class FileController {
 
 
         // 存放文件夹 重新起一个文件名 时间戳
-        File localFile = new File(folder , System.currentTimeMillis()+ ".txt");
+        File localFile = new File(folder, System.currentTimeMillis() + ".txt");
 
         // 把传上来的文件写到本地
         file.transferTo(localFile);
@@ -52,7 +52,7 @@ public class FileController {
 
             response.setContentType("application/x-download");
             response.addHeader("Content-Disposition", "attachment;filename=test.txt");
-           // commons-io
+            // commons-io
             IOUtils.copy(inputStream, outputStream);
             outputStream.flush();
         }

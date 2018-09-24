@@ -9,10 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.test.web.servlet.result.ModelResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -37,7 +35,7 @@ public class UserControllerTest {
     private MockMvc mockMvc;
 
     @Before
-    public void setup(){
+    public void setup() {
         // mvc 测试环境
         mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
     }
@@ -45,7 +43,7 @@ public class UserControllerTest {
     @Test
     public void whenUploadSuccess() throws Exception {
         String result = mockMvc.perform(MockMvcRequestBuilders.fileUpload("/file")
-                 // 传上来参数的名字file
+                // 传上来参数的名字file
                 .file(new MockMultipartFile("file", "test.txt", "multipart/form-data", "hello upload文件内容".getBytes("UTF-8"))))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andReturn().getResponse().getContentAsString();
@@ -88,18 +86,18 @@ public class UserControllerTest {
     @Test
     public void whenGetInfoFail() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/user/a")
-                    .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.status().is4xxClientError());
     }
 
     @Test
-    public void  whenCreateSuccess() throws Exception{
+    public void whenCreateSuccess() throws Exception {
 
         // 时间传输  毫秒值
         Date date = new Date();
-        System.out.println("whenCreateSuccess: " +date.getTime());
+        System.out.println("whenCreateSuccess: " + date.getTime());
 
-        String content = "{\"username\":\"tom\",\"password\":null,\"birthday\":"+ date.getTime() +"}";
+        String content = "{\"username\":\"tom\",\"password\":null,\"birthday\":" + date.getTime() + "}";
         String result = mockMvc.perform(MockMvcRequestBuilders.post("/user")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(content))
@@ -107,17 +105,17 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("1"))
                 .andReturn().getResponse().getContentAsString();
 
-        System.out.println("result "+ result);
+        System.out.println("result " + result);
     }
 
     @Test
-    public void  whenUpdateSuccess() throws Exception{
+    public void whenUpdateSuccess() throws Exception {
 
         // 时间传输  毫秒值  一年以后的时间
         Date date = new Date(LocalDateTime.now().plusYears(1).atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
-        System.out.println("whenUpdateSuccess: " +date.getTime());
+        System.out.println("whenUpdateSuccess: " + date.getTime());
 
-        String content = "{\"id\" : \"1 \",\"username\":\"tom\",\"password\":null,\"birthday\":"+ date.getTime() +"}";
+        String content = "{\"id\" : \"1 \",\"username\":\"tom\",\"password\":null,\"birthday\":" + date.getTime() + "}";
         String result = mockMvc.perform(MockMvcRequestBuilders.put("/user/1")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .content(content))
@@ -125,11 +123,11 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value("1"))
                 .andReturn().getResponse().getContentAsString();
 
-        System.out.println("result "+ result);
+        System.out.println("result " + result);
     }
 
     @Test
-    public void whenDelSuccess() throws Exception{
+    public void whenDelSuccess() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.delete("/user/1")
                 .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(MockMvcResultMatchers.status().isOk());

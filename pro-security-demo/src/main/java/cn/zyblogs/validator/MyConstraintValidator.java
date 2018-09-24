@@ -13,7 +13,7 @@ import javax.validation.ConstraintValidatorContext;
  * @Author ZhangYB
  * @Version V1.0
  */
-public class MyConstraintValidator implements ConstraintValidator<MyConstraint ,Object> {
+public class MyConstraintValidator implements ConstraintValidator<MyConstraint, Object> {
 
     @Autowired
     private HelloService helloService;
@@ -21,7 +21,7 @@ public class MyConstraintValidator implements ConstraintValidator<MyConstraint ,
     @Override
     public void initialize(MyConstraint myConstraint) {
         // 效验器初始化
-        System.out.println("my validator init." );
+        System.out.println("my validator init.");
     }
 
     @Override

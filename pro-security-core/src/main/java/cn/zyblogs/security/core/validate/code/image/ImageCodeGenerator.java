@@ -5,7 +5,6 @@ import cn.zyblogs.security.core.validate.code.ValidateCodeGenerator;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
@@ -24,7 +23,7 @@ import java.util.Random;
 public class ImageCodeGenerator implements ValidateCodeGenerator {
 
     /**
-     *  配置信息
+     * 配置信息
      */
     @Autowired
     @Getter
@@ -40,7 +39,7 @@ public class ImageCodeGenerator implements ValidateCodeGenerator {
                 securityProperties.getCode().getImage().getHeight());
 
 
-        BufferedImage image = new BufferedImage(width , height ,BufferedImage.TYPE_INT_RGB);
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
         Graphics g = image.getGraphics();
         Random random = new Random();

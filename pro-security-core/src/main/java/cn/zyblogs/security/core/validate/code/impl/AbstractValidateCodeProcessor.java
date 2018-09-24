@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package cn.zyblogs.security.core.validate.code.impl;
 
@@ -13,7 +13,6 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @Title: AbstractValidateCodeProcessor.java
@@ -24,37 +23,37 @@ import java.util.Objects;
  */
 public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> implements ValidateCodeProcessor {
 
-	/**
-	 * 操作session的工具类
-	 */
-	private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
-	/**
-	 * 收集系统中所有的 {@link ValidateCodeGenerator} 接口的实现。
-	 */
-	@Autowired
-	private Map<String, ValidateCodeGenerator> validateCodeGenerators;
+    /**
+     * 操作session的工具类
+     */
+    private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
+    /**
+     * 收集系统中所有的 {@link ValidateCodeGenerator} 接口的实现。
+     */
+    @Autowired
+    private Map<String, ValidateCodeGenerator> validateCodeGenerators;
 
-	@Override
-	public void create(ServletWebRequest request) throws Exception {
-		C validateCode = generate(request);
-		save(request, validateCode);
-		send(request, validateCode);
-	}
+    @Override
+    public void create(ServletWebRequest request) throws Exception {
+        C validateCode = generate(request);
+        save(request, validateCode);
+        send(request, validateCode);
+    }
 
-	/**
-	 * 生成校验码
-	 * 
-	 * @param request
-	 * @return
-	 */
-	private C generate(ServletWebRequest request) {
-		String type = getValidateCodeType(request).toString().toLowerCase();
-		String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
-		// imageValidateCodeGenerator
-		ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(generatorName);
+    /**
+     * 生成校验码
+     *
+     * @param request
+     * @return
+     */
+    private C generate(ServletWebRequest request) {
+        String type = getValidateCodeType(request).toString().toLowerCase();
+        String generatorName = type + ValidateCodeGenerator.class.getSimpleName();
+        // imageValidateCodeGenerator
+        ValidateCodeGenerator validateCodeGenerator = validateCodeGenerators.get(generatorName);
 
-		System.out.println(generatorName);
-		validateCodeGenerators.forEach((k , v )-> System.out.println("key : " + k + " value : " + v));
+        System.out.println(generatorName);
+        validateCodeGenerators.forEach((k, v) -> System.out.println("key : " + k + " value : " + v));
 
 //		imageValidateCodeGenerator
 //		key : smsValidateCodeGenerator value : com.imooc.security.core.validate.code.sms.SmsCodeGenerator@21acb983
@@ -63,86 +62,86 @@ public abstract class AbstractValidateCodeProcessor<C extends ValidateCode> impl
 //		imageValidateCodeGenerator
 //		key : smsValidateCodeGenerator value : cn.zyblogs.security.core.validate.code.sms.SmsCodeGenerator@1c46be64
 //		key : imageCodeGenerator value : cn.zyblogs.security.core.validate.code.image.ImageCodeGenerator@3a3bb547
-		if (validateCodeGenerator == null) {
-			throw new ValidateCodeException("验证码生成器" + generatorName + "不存在");
-		}
-		return (C) validateCodeGenerator.generate(request);
-	}
+        if (validateCodeGenerator == null) {
+            throw new ValidateCodeException("验证码生成器" + generatorName + "不存在");
+        }
+        return (C) validateCodeGenerator.generate(request);
+    }
 
-	/**
-	 * 保存校验码
-	 * 
-	 * @param request
-	 * @param validateCode
-	 */
-	private void save(ServletWebRequest request, C validateCode) {
-		sessionStrategy.setAttribute(request, getSessionKey(request), validateCode);
-	}
+    /**
+     * 保存校验码
+     *
+     * @param request
+     * @param validateCode
+     */
+    private void save(ServletWebRequest request, C validateCode) {
+        sessionStrategy.setAttribute(request, getSessionKey(request), validateCode);
+    }
 
-	/**
-	 * 构建验证码放入session时的key
-	 * 
-	 * @param request
-	 * @return
-	 */
-	private String getSessionKey(ServletWebRequest request) {
-		return SESSION_KEY_PREFIX + getValidateCodeType(request).toString().toUpperCase();
-	}
+    /**
+     * 构建验证码放入session时的key
+     *
+     * @param request
+     * @return
+     */
+    private String getSessionKey(ServletWebRequest request) {
+        return SESSION_KEY_PREFIX + getValidateCodeType(request).toString().toUpperCase();
+    }
 
-	/**
-	 * 发送校验码，由子类实现
-	 * 
-	 * @param request
-	 * @param validateCode
-	 * @throws Exception
-	 */
-	protected abstract void send(ServletWebRequest request, C validateCode) throws Exception;
+    /**
+     * 发送校验码，由子类实现
+     *
+     * @param request
+     * @param validateCode
+     * @throws Exception
+     */
+    protected abstract void send(ServletWebRequest request, C validateCode) throws Exception;
 
-	/**
-	 * 根据请求的url获取校验码的类型
-	 * 
-	 * @param request
-	 * @return
-	 */
-	private ValidateCodeType getValidateCodeType(ServletWebRequest request) {
-		String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");
-		return ValidateCodeType.valueOf(type.toUpperCase());
-	}
+    /**
+     * 根据请求的url获取校验码的类型
+     *
+     * @param request
+     * @return
+     */
+    private ValidateCodeType getValidateCodeType(ServletWebRequest request) {
+        String type = StringUtils.substringBefore(getClass().getSimpleName(), "CodeProcessor");
+        return ValidateCodeType.valueOf(type.toUpperCase());
+    }
 
-	@Override
-	public void validate(ServletWebRequest request) {
+    @Override
+    public void validate(ServletWebRequest request) {
 
-		ValidateCodeType processorType = getValidateCodeType(request);
-		String sessionKey = getSessionKey(request);
+        ValidateCodeType processorType = getValidateCodeType(request);
+        String sessionKey = getSessionKey(request);
 
-		C codeInSession = (C) sessionStrategy.getAttribute(request, sessionKey);
+        C codeInSession = (C) sessionStrategy.getAttribute(request, sessionKey);
 
-		String codeInRequest;
-		try {
-			codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(),
-					processorType.getParamNameOnValidate());
-		} catch (ServletRequestBindingException e) {
-			throw new ValidateCodeException("获取验证码的值失败");
-		}
+        String codeInRequest;
+        try {
+            codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(),
+                    processorType.getParamNameOnValidate());
+        } catch (ServletRequestBindingException e) {
+            throw new ValidateCodeException("获取验证码的值失败");
+        }
 
-		if (StringUtils.isBlank(codeInRequest)) {
-			throw new ValidateCodeException(processorType + "验证码的值不能为空");
-		}
+        if (StringUtils.isBlank(codeInRequest)) {
+            throw new ValidateCodeException(processorType + "验证码的值不能为空");
+        }
 
-		if (codeInSession == null) {
-			throw new ValidateCodeException(processorType + "验证码不存在");
-		}
+        if (codeInSession == null) {
+            throw new ValidateCodeException(processorType + "验证码不存在");
+        }
 
-		if (codeInSession.isExpried()) {
-			sessionStrategy.removeAttribute(request, sessionKey);
-			throw new ValidateCodeException(processorType + "验证码已过期");
-		}
+        if (codeInSession.isExpried()) {
+            sessionStrategy.removeAttribute(request, sessionKey);
+            throw new ValidateCodeException(processorType + "验证码已过期");
+        }
 
-		if (!StringUtils.equals(codeInSession.getCode(), codeInRequest)) {
-			throw new ValidateCodeException(processorType + "验证码不匹配");
-		}
+        if (!StringUtils.equals(codeInSession.getCode(), codeInRequest)) {
+            throw new ValidateCodeException(processorType + "验证码不匹配");
+        }
 
-		sessionStrategy.removeAttribute(request, sessionKey);
-	}
+        sessionStrategy.removeAttribute(request, sessionKey);
+    }
 
 }

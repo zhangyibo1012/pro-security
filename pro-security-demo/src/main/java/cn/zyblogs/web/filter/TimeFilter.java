@@ -1,7 +1,6 @@
 package cn.zyblogs.web.filter;
 
 
-
 import javax.servlet.*;
 import java.io.IOException;
 
@@ -24,7 +23,7 @@ public class TimeFilter implements Filter {
         System.err.println("time filter start");
         long start = System.currentTimeMillis();
         chain.doFilter(request, response);
-        System.err.println("time filter 耗时:"+ (System.currentTimeMillis() - start));
+        System.err.println("time filter 耗时:" + (System.currentTimeMillis() - start));
         System.err.println("time filter finish");
     }
 

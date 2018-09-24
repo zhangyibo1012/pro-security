@@ -21,7 +21,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 public class SmsCodeGenerator implements ValidateCodeGenerator {
 
     /**
-     *  配置信息
+     * 配置信息
      */
     @Autowired
     @Getter
@@ -33,8 +33,6 @@ public class SmsCodeGenerator implements ValidateCodeGenerator {
         String code = RandomStringUtils.randomNumeric(securityProperties.getCode().getSms().getLength());
         return new ValidateCode(code, securityProperties.getCode().getSms().getExpireIn());
     }
-
-
 
 
 }

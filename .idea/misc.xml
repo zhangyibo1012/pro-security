@@ -5,6 +5,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-security-app/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/pro-security-core/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/pro-security-demo/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/pro-security-browser/target/maven-archiver/pom.properties" />
       </list>
     </option>
   </component>

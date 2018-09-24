@@ -16,6 +16,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 import javax.sql.DataSource;
 
@@ -27,10 +28,10 @@ import javax.sql.DataSource;
  * @Version V1.0
  */
 @Configuration
-public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
+public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
 
     /**
-     *  登陆请求页面跳转 不需要权限认证
+     * 登陆请求页面跳转 不需要权限认证
      */
     @Autowired
     private SecurityProperties securityProperties;
@@ -45,7 +46,8 @@ public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
     private AuthenticationFailureHandler zyblogsAuthenticationFailHandler;
 
     /**
-     *  数据源信息
+     * 数据源信息
+     *
      * @return
      */
     @Autowired
@@ -57,12 +59,16 @@ public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
     @Autowired
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
+    @Autowired
+    private SpringSocialConfigurer zyblogsSocialConfigurer;
+
     /**
      * 加密  每次加密都生成不一样的字符串
+     *
      * @return
      */
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -70,7 +76,7 @@ public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
      * 记住我功能
      */
     @Bean
-    public PersistentTokenRepository persistentTokenRepository(){
+    public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
         tokenRepository.setDataSource(dataSource);
         // 系统启动自动建这张数据表  可以写也可以不写
@@ -80,7 +86,7 @@ public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception{
+    protected void configure(HttpSecurity http) throws Exception {
 
 //        // 自定义ValidateCodeFilter
 //        ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
@@ -140,29 +146,32 @@ public class BrowserSecurityConfig  extends AbstractChannelSecurityConfig {
 //                // 添加配置对象
 //                .apply(smsCodeAuthenticationSecurityConfig);
 
-applyPasswordAuthenticationConfig(http);
+        applyPasswordAuthenticationConfig(http);
 
+        // apply 添加过滤器 拦截请求 收到请求引导用户社交登陆
         //添加配置对象
         http.apply(validateCodeSecurityConfig)
                 .and()
-             .apply(smsCodeAuthenticationSecurityConfig)
-                 .and()
-             .rememberMe()
+                .apply(smsCodeAuthenticationSecurityConfig)
+                .and()
+              .apply(zyblogsSocialConfigurer)
+                .and()
+                .rememberMe()
                 .tokenRepository(persistentTokenRepository())
                 .tokenValiditySeconds(securityProperties.getBrowser().getRemeberMeSeconds())
                 .userDetailsService(userDetailsService)
                 .and()
-            .authorizeRequests()
+                .authorizeRequests()
                 .antMatchers(
                         SecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
                         SecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_MOBILE,
                         securityProperties.getBrowser().getLoginPage(),
                         SecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "/*"
                 ).permitAll()
-             .anyRequest()
-             .authenticated()
-             .and()
-             .csrf().disable();
+                .anyRequest()
+                .authenticated()
+                .and()
+                .csrf().disable();
 
 
     }
