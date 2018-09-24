@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d79b063f-c1e3-417c-bcb3-c191028c5c5d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateSmsCodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/AbstractChannelSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeProcessorHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,11 +31,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ValidateCodeFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java">
+      <file leaf-file-name="BrowserSecurityConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="133" column="88" lean-forward="true" selection-start-line="133" selection-start-column="88" selection-end-line="133" selection-end-column="88" />
+            <state relative-caret-position="623">
+              <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityProperties.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserProperties.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-144">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-684">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsCodeAuthenticationToken.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractChannelSecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/AbstractChannelSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-219">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/async/QueueListener.java" />
-        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/async/MockQueue.java" />
-        <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/async/DeferredResultHolder.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/async/AsyncController.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/web/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/java/cn/zyblogs/DemoApplication.java" />
@@ -118,16 +201,19 @@
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/impl/AbstractValidateCodeProcessor.java" />
         <option value="$PROJECT_DIR$/pro-security-browser/src/main/resources/resources/zyblogs-signIn.html" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthentication.java" />
-        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationToken.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationFifter.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" />
         <option value="$PROJECT_DIR$/pro-security-demo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeController.java" />
         <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateSmsCodeFilter.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeProcessorHolder.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationToken.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/AbstractChannelSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -149,7 +235,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="705" />
@@ -209,16 +295,9 @@
               <item name="pro-security-browser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-security-browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="browser" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
@@ -273,6 +352,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -292,6 +382,14 @@
               <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pro-security" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-security-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pro-security" type="b2602c69:ProjectViewProjectNode" />
@@ -542,7 +640,7 @@
       <workItem from="1537607358501" duration="8095000" />
       <workItem from="1537661495544" duration="34985000" />
       <workItem from="1537713398708" duration="8548000" />
-      <workItem from="1537753646115" duration="5933000" />
+      <workItem from="1537753646115" duration="7346000" />
     </task>
     <task id="LOCAL-00001" summary="springboot 打包可执行jar插件">
       <created>1537545712997</created>
@@ -642,7 +740,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537721938730</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="短线登陆ok">
+      <created>1537761865402</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1537761865402</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -678,7 +783,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60742000" />
+    <option name="totallyTimeSpent" value="62155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -768,35 +873,15 @@
     <MESSAGE value="验证码" />
     <MESSAGE value="rememberMe 记住我功能" />
     <MESSAGE value="sms" />
-    <option name="LAST_COMMIT_MESSAGE" value="sms" />
+    <MESSAGE value="短线登陆ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="短线登陆ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apache-maven-3.5.3/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/javax/naming/AuthenticationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="49" column="56" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_171/src.zip!/javax/naming/NamingSecurityException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -902,17 +987,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/MyUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
           <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -964,16 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SmsCodeProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -1007,13 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="50" column="80" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -1073,47 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#4942#4943#0" expanded="true" />
-            <element signature="e#4973#4974#0" expanded="true" />
-            <element signature="e#5020#5021#0" expanded="true" />
-            <element signature="e#5051#5052#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2500#2501#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#1963#1964#0" expanded="true" />
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1469">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ImageCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1146,23 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/SmsCodeAuthenticationSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="48" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2045">
-          <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-111">
@@ -1189,11 +1195,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="133" column="88" lean-forward="true" selection-start-line="133" selection-start-column="88" selection-end-line="133" selection-end-column="88" />
+        <state relative-caret-position="213">
+          <caret line="56" column="39" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeProcessorHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/AbstractChannelSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/validate/code/ValidateCodeSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/BrowserProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-core/src/main/java/cn/zyblogs/security/core/properties/SecurityConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-security-browser/src/main/java/cn/zyblogs/security/browser/BrowserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="126" column="31" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
         </state>
       </provider>
     </entry>
